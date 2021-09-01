@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    --roxo: #bdb2ff;
+    --rosa: #ffc6ff;
+    --rosa-claro:#ffe0ff;
+    --azul-escuro:#a0c4ff;
+    --azul-claro:#9bf6ff;
+
+
+}
+body{
+    font-family: 'nunito', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--roxo);
+}
+header{
+    background-color: var(--rosa);
+}
+button{
+    padding: .8rem;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: .5rem;
+    background-color: var(--azul-claro);
+}
+button:hover{
+    background-color: var(--azul-escuro);
+}
+.container{
+    width: 95%;
+    margin: auto;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    background-color: var(--rosa);
+}
+.nav button{
+    font-family: inherit;
+}
+.create-box{
+    width: 38rem;
+    margin: auto;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background-color: var(--rosa-claro);
+    box-shadow:  0 .2rem .4rem 0 rgba(0, 0, 0, 0.5);
+}
+.create-box input{
+    width: 100%;
+    border-radius: .5rem;
+    font-family: inherit;
+    border: .1rem solid lightgray;
+}
+.create-box button{
+    width: fit-content;
+}
+.flashcards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:auto;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+.flashcard{
+    width: 37rem;
+    height: 20rem;
+    word-wrap: break-word;
+    margin: 1rem;
+    background-color: var(--rosa-claro);
+    box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.flashcard h2{
+    font-size: 1.6rem;
+}
+
+@media(max-width:768px){
+    .flashcard{
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media(max-width:480px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .create-box{
+        width: 100%;
+    }
+    .flashcard{
+        width: 100%;
+    }
+}

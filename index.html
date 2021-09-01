@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>CheckPoint</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav">
+                <h1>FlashCards</h1>
+                <div>
+                    <button id="newCard">New Card</button>
+                    <button id="delCards">Delete Cards</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="create-box">
+                <h2>Create Flashcard</h2>
+                <label for="question">Question</label>
+                <input type="text" id="question" name="question">
+                <br>
+                <label for="answer">Answer</label>
+                <input type="text" id="answer" name="answer">
+                <div>
+                    <button id="save">Save</button>
+                    <button id="close">Close</button>
+                </div>
+            </div>
+            <div class="flashcards"></div>
+        </div>
+    </main>
+    <!-- JavaScript -->
+    <script src="./app.js"></script>
+</body>
+</html>
