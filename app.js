@@ -27,11 +27,11 @@ function divMaker(text){
 
     div.className = 'flashcard'
 
-    h2_question.setAttribute('style', "border-bottom:1px solid black; padding: 1.5rem; margin-bottom:3rem")
+    h2_question.setAttribute('style', "border-bottom:1px solid var(--roxo); font-size: 2rem;padding: 1.5rem; margin-bottom:1.5rem;text-align: center")
 
     h2_question.innerHTML = text.my_question
 
-    h2_answer.setAttribute("style", "text-align: center; display:none")
+    h2_answer.setAttribute("style", "text-align: left; display:none; padding: 0 3rem; font-weight: 400")
     h2_answer.innerHTML = text.my_answer
 
     div.appendChild(h2_question)
