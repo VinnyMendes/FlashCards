@@ -27,7 +27,7 @@ function divMaker(text){
 
     div.className = 'flashcard'
 
-    h2_question.setAttribute('style', "border-bottom:1px solid var(--roxo); font-size: 2rem;padding: 1.5rem; margin-bottom:1.5rem;text-align: center")
+    h2_question.setAttribute('style', "border-bottom:1px solid var(--roxo); font-size: 2.5rem;padding: 1.5rem; margin-bottom:1.5rem;text-align: center")
 
     h2_question.innerHTML = text.my_question
 
