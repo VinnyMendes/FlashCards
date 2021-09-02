@@ -10,9 +10,12 @@ document.getElementById("save").addEventListener("click", addFlashcard)
 document.getElementById("close").addEventListener("click", hideCreateBox)
 
 function delFlashcards(){
-    localStorage.clear()
-    flashcards.innerHTML = ''
-    contentArray = []
+    let confirmation = confirm("Do you really want to delete all your flashcards?")
+    if(confirmation){
+        localStorage.clear()
+        flashcards.innerHTML = ''
+        contentArray = []
+    }
 }
 
 contentArray.forEach(divMaker);
