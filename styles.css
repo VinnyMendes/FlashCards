@@ -74,9 +74,6 @@ button:hover{
     border: .1rem solid lightgray;
     margin-bottom: 2rem;
 }
-.create-box button{
-    width: fit-content;
-}
 .flashcards{
     display: flex;
     justify-content: center;
@@ -120,5 +117,8 @@ button:hover{
     }
     .flashcard{
         width: 100%;
+    }
+    .flashcards{
+        padding: 0;
     }
 }
