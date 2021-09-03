@@ -29,21 +29,29 @@
     </header>
     <main>
         <div class="container">
-            <div class="create-box">
-                <h2>Create Flashcard</h2>
-                <label for="question" class="label">Question</label>
-                <input type="text" id="question" name="question" class="input">
-                <br>
-                <label for="answer" class="label">Answer</label>
-                <input type="text" id="answer" name="answer" class="input">
-                <div>
-                    <button id="save" class="btn">Save</button>
-                    <button id="close" class="btn">Close</button>
-                </div>
-            </div>
+           
             <div class="flashcards"></div>
         </div>
     </main>
+    <div class="modal" aria-expanded="false" data-transition="false">
+        <div class="create-box">
+            <h2>Create Flashcard</h2>
+            <div class="input-group">
+                <label for="question" class="label">Question</label>
+                <input type="text" id="question" name="question" class="input">
+                <p id="question-error"></p>
+            </div>
+            <div class="input-group">
+                <label for="answer" class="label">Answer</label>
+                <input type="text" id="answer" name="answer" class="input">
+                <p id="answer-error"></p>
+            </div>
+            <div>
+                <button id="save" class="btn">Save</button>
+                <button id="close" class="btn">Close</button>
+            </div>
+        </div>
+    </div>
     <!-- JavaScript -->
     <script src="./app.js"></script>
 </body>

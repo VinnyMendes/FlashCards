@@ -64,6 +64,24 @@ button:hover{
 .nav button{
     font-family: inherit;
 }
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    opacity: 0;
+}
+.modal[aria-expanded="true"]{
+    display: block;
+    animation: fade-in 300ms linear forwards;
+}
+.modal[aria-expanded="false"][data-transition="true"]{
+    display: block;
+    animation: fade-out 300ms linear forwards;
+}
 .create-box{
     width: 38rem;
     margin: auto;
@@ -72,6 +90,13 @@ button:hover{
     background-color: var(--rosa-claro);
     box-shadow:  0 .2rem .4rem 0 rgba(0, 0, 0, 0.5);
     margin-bottom: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .create-box h2{
     font-size: 2.5rem;
@@ -81,9 +106,20 @@ button:hover{
     width: 100%;
     border-radius: .5rem;
     font-family: inherit;
-    border: .1rem solid lightgray;
-    margin-bottom: 2rem;
+    border: .2rem solid lightgray;
+    margin-bottom: 0.2rem;
 }
+.create-box input[data-invalid="true"]{
+    border-color: rgb(255, 0, 0);
+}
+#question-error, #answer-error{
+    color: rgb(245, 235, 235);
+    padding: 0 0.5rem;
+}
+#question-error:empty, #answer-error:empty{
+    display: none;
+}
+
 .flashcards{
     display: flex;
     justify-content: center;
@@ -131,5 +167,21 @@ button:hover{
     }
     .flashcards{
         padding: 0;
+    }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
     }
 }
