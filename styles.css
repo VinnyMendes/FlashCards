@@ -115,6 +115,7 @@ button:hover{
 #question-error, #answer-error{
     color: rgb(245, 235, 235);
     padding: 0 0.5rem;
+    font-size: 1.6rem;
 }
 #question-error:empty, #answer-error:empty{
     display: none;
