@@ -13,9 +13,9 @@ document.getElementById("close").addEventListener("click", toggleCreateBox)
 function delFlashcards(){
     let confirmation = confirm("Do you really want to delete all your flashcards?")
     if(confirmation){
-        localStorage.clear()
-        flashcards.innerHTML = ''
-        contentArray = []
+    localStorage.removeItem("items");
+    flashcards.innerHTML = "";
+    contentArray = [];
     }
 }
 contentArray.forEach(divMaker);
